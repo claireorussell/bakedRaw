@@ -1,10 +1,39 @@
-.error {
-  color: red;
-  font-weight: bold;
+body {
+  margin: 10px;
+  background-color: black;
+  text-align: center;
 }
 
-.wait-indicator {
-  position: absolute;
-  margin-left: 5px;
-  width: 20px;
+h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 200px;
+  color: white;
 }
+
+
+
+.btn {
+  color: white;
+  display: block;
+  margin: auto;
+  font-size: 80px;
+  width: auto;
+  border: 1px solid whitesmoke;
+
+}
+
+.btn:hover {
+  color: pink;
+  border: 1px solid pink;
+}
+
+.btn:focus {
+  box-shadow: none  !important;
+}
+
+
+/* Baked page */
+.categories {
+
+}
+
