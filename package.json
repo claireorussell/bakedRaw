@@ -30,7 +30,9 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "react-router-dom": "^5.1.2"
+    "knex": "^0.20.10",
+    "react-router-dom": "^5.1.2",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
