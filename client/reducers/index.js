@@ -1,11 +1,9 @@
 import {combineReducers} from 'redux'
 
-import errorMessage from './error-message'
-import subreddits from './subreddits'
-import waiting from './waiting'
+import loading from './loading'
+import recipes from './recipes'
 
 export default combineReducers({
-  errorMessage,
-  subreddits,
-  waiting
+  loading, 
+  recipes
 })

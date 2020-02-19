@@ -2,22 +2,24 @@ body {
   margin: 10px;
   background-color: black;
   text-align: center;
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 h1 {
-  font-family: 'Rajdhani', sans-serif;
   font-size: 200px;
-  color: white;
+  margin: 20px 0px 100px 0px;
 }
 
 .btn {
-  color: white;
+
   display: block;
   margin: auto;
   font-size: 70px;
   width: auto;
   border: 1px solid whitesmoke;
-
+  background-color: black;
+  color: white;
 }
 
 .btn:hover {
@@ -25,13 +27,58 @@ h1 {
   border: 1px solid pink;
 }
 
-.btn:focus {
+
+.link {
   box-shadow: none  !important;
+  text-decoration: none !important;
 }
+
 
 
 /* Baked page */
-.categories {
-
+.container {
+  margin: 50px;
+  padding: 20px;
+  border: 3px solid pink;
+  background-color: black;
+  color: white;
 }
 
+
+
+.recipeName {
+  font-size: 100px;
+  margin: 0px ;
+}
+
+.recipeBody {
+  text-align: left;
+  font-size: 20px;
+  padding: 30px;
+}
+
+.bottomButtons {
+  display: inline-flex;
+}
+
+.linkHome {
+  box-shadow: none  !important;
+  text-decoration: none !important;
+}
+
+.btnNext {
+  display: block;
+  margin: 30px 10px;
+  font-size: 25px;
+  width: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  height: 50px;
+}
+
+.btnNext:hover {
+  color: pink;
+  border: 1px solid pink;
+}

@@ -1,39 +1,32 @@
 import request from 'superagent'
 
-export const SHOW_ERROR = 'SHOW_ERROR'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const REQUEST_POSTS = 'REQUEST_POSTS'
 
-export const requestPosts = () => {
+export const getRecipes = () => {
+  return request
+    .get('/api/v1/recipes')
+    .then(response => {
+      console.log(response)
+      return response.body
+    })
+} // talks to the backend route of api/v1/recipes which returns the json(recipes)
+
+
+export const gotRecipes = (recipes) => {
   return {
-    type: REQUEST_POSTS
+    type: 'GOT_RECIPES',
+    recipes: recipes
   }
-}
+} // sets out the case for the reducer to set the global state of the recipes
 
-export const receivePosts = (posts) => {
-  return {
-    type: RECEIVE_POSTS,
-    posts: posts.map(post => post.data)
-  }
-}
 
-export const showError = (errorMessage) => {
-  return {
-    type: SHOW_ERROR,
-    errorMessage: errorMessage
-  }
-}
-
-export function fetchPosts (subreddit) {
-  return (dispatch) => {
-    dispatch(requestPosts())
-    return request
-      .get(`/api/v1/reddit/subreddit/${subreddit}`)
-      .then(res => {
-        dispatch(receivePosts(res.body))
+export function fetchRecipes () {
+    return dispatch => {
+      getRecipes()
+      .then(recipes => {
+        console.log(recipes)
+        dispatch(gotRecipes(recipes))
       })
-      .catch(err => {
-        dispatch(showError(err.message))
-      })
-  }
+    }
+    
+    
 }
