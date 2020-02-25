@@ -2,14 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchRecipes } from '../actions/index'
-import Home from './Home'
 
 
 class Goodness extends React.Component {
     constructor(props) {
         super(props)
 
-        this.handleClick = this.handleClick.bind(this);
+        this.handleClick = this.handleClick.bind(this)
     }
 
     componentDidMount() {
@@ -31,12 +30,12 @@ class Goodness extends React.Component {
                 {recipe && <section>
                     <h3 className='recipeName'>{recipe.name}</h3>
                     <div className='recipeBody'>
-                    <div className='ingredientList'>
-                        <h4>Serves: {recipe.serves}</h4>
-                        <h4>Ingredients </h4>
-                        {recipe.ingredients.map(ingredient => {
-                            return <li>{ingredient}</li>
-                        })}
+                        <div className='ingredientList'>
+                            <h4>Serves: {recipe.serves}</h4>
+                            <h4>Ingredients </h4>
+                            {recipe.ingredients.map(ingredient => {
+                                return <li>{ingredient}</li>
+                            })}
                         </div>
                         <div className='method'>
                             <h4>Method </h4>
@@ -45,10 +44,10 @@ class Goodness extends React.Component {
                             })}
                         </div>
                         <div className='bottomButtons'>
-                            <Link to='/' className='linkHome'><button className='btnNext'>Take me home</button></Link> 
+                            <Link to='/' className='linkHome'><button className='btnNext'>Take me home</button></Link>
                             <button className='btnNext' onClick={this.handleClick} >Nope, new recipe</button>
-                            </div>
                         </div>
+                    </div>
                 </section>}
             </div>
         )

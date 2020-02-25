@@ -2,7 +2,7 @@ import React from 'react'
 
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import Goodness from './Goodness'
+
 
 class Home extends React.Component {
   
@@ -11,6 +11,7 @@ class Home extends React.Component {
         return (
             <div className='homeDiv'>
                 <Link to='/goodness' className='link'><button className='btn'>GOODNESS AISLE</button></Link> 
+                <Link to='/add' className='link'><button className='btn'>SHARE YOUR YUMS</button></Link>
             </div>
         )
     }
