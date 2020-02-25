@@ -13,7 +13,18 @@ function getRecipes() {
     })
 }
 
+function addRecipe(recipe) {
+    return db('recipes')
+    .insert({
+        name:recipe.name, 
+        serves: recipe.serves, 
+        ingredients: JSON.stringify(recipe.ingredients),
+        method: JSON.stringify(recipe.method)
+    })
+}
+
 
 module.exports = {
-    getRecipes
+    getRecipes,
+    addRecipe
 }

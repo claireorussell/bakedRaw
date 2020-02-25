@@ -88,6 +88,8 @@ h2 {
 }
 
 /* FORM */
+
+
 form {
   text-align: center;
   width: 60%;
@@ -106,4 +108,13 @@ input {
 
 .form {
   height: 100px ;
+}
+
+.ingredientAmount {
+  width: 150px;
+  margin-right: 5px;
+}
+
+.ingredientType {
+  width:350px;
 }

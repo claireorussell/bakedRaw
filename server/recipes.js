@@ -15,4 +15,9 @@ router.get('/recipes', (req, res) => {
     
 })
 
+router.post('/add', (req, res) => {
+  db.addRecipe(req.body)
+  .then(id => res.json(id[0]))
+})
+
 module.exports = router
