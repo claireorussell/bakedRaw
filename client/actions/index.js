@@ -19,14 +19,21 @@ export const gotRecipes = (recipes) => {
 } // sets out the case for the reducer to set the global state of the recipes
 
 
-export function fetchRecipes () {
-    return dispatch => {
-      getRecipes()
+export function fetchRecipes() {
+  return dispatch => {
+    getRecipes()
       .then(recipes => {
         console.log(recipes)
         dispatch(gotRecipes(recipes))
       })
-    }
-    
-    
+  }
+}
+
+export function addRecipe(recipe) {
+  return () => {
+    request
+      .post('/api/v1/add')
+      .send(recipe)
+      .then(res => res.body)
+  }
 }

@@ -4,11 +4,16 @@ body {
   text-align: center;
   color: white;
   font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
 }
 
 h1 {
   font-size: 200px;
   margin: 20px 0px 100px 0px;
+}
+
+h2 {
+  font-size: 80px;
 }
 
 .btn {
@@ -17,7 +22,7 @@ h1 {
   margin: auto;
   font-size: 70px;
   width: auto;
-  border: 1px solid whitesmoke;
+  border: none;
   background-color: black;
   color: white;
 }
@@ -53,7 +58,6 @@ h1 {
 
 .recipeBody {
   text-align: left;
-  font-size: 20px;
   padding: 30px;
 }
 
@@ -81,4 +85,36 @@ h1 {
 .btnNext:hover {
   color: pink;
   border: 1px solid pink;
+}
+
+/* FORM */
+
+
+form {
+  text-align: center;
+  width: 60%;
+  margin: 20px 20%;
+}
+
+label {
+  font-size: 30px;
+}
+
+input {
+  height: 35px;
+  width: 100%;
+  font-size: 25px;
+}
+
+.form {
+  height: 100px ;
+}
+
+.ingredientAmount {
+  width: 150px;
+  margin-right: 5px;
+}
+
+.ingredientType {
+  width:350px;
 }
